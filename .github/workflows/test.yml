@@ -1,17 +1,16 @@
-name: IITM TDS Test
+name: IITM Test Workflow
 
 on:
-workflow_dispatch:
+  workflow_dispatch:
+  push:
 
 jobs:
-test:
-runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-latest
 
-```
-steps:
-  - name: Checkout
-    uses: actions/checkout@v4
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
 
-  - name: 24f3004361@ds.study.iitm.ac.in
-    run: echo "Hello IITM TDS"
-```
+      - name: 24f3004361@ds.study.iitm.ac.in
+        run: echo "Hello, world!"
